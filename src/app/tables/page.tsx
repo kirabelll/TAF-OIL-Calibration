@@ -1,4 +1,6 @@
+import React from 'react';
 import { getDb, getTableCounts, toPlain } from '@/lib/db';
+import DashboardLayout from '@/components/dashboard-layout';
 import TablesClient from './tables-client';
 
 export const dynamic = 'force-dynamic';
@@ -17,17 +19,19 @@ export default async function TablesPage() {
   const counts = getTableCounts();
 
   return (
-    <main className="p-3 md:p-6 bg-slate-200 min-h-screen dark:bg-slate-950">
-      <TablesClient
-        trucks={trucks}
-        calibrations={calibrations}
-        products={products}
-        orders={orders}
-        debitNotes={debitNotes}
-        densitySample={densitySample}
-        factorSample={factorSample}
-        tableCounts={counts}
-      />
-    </main>
+    <DashboardLayout>
+      <div className="space-y-6">
+        <TablesClient
+          trucks={trucks}
+          calibrations={calibrations}
+          products={products}
+          orders={orders}
+          debitNotes={debitNotes}
+          densitySample={densitySample}
+          factorSample={factorSample}
+          tableCounts={counts}
+        />
+      </div>
+    </DashboardLayout>
   );
 }

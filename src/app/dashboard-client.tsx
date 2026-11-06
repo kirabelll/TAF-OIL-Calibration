@@ -434,8 +434,8 @@ export default function TranshipmentDashboard({
         {/* Global Action Controls */}
         <div className="flex flex-wrap items-center gap-2">
           <ThemeToggle />
-          <div className="flex items-center bg-slate-100 p-1 rounded-lg border border-slate-200">
-            <span className="text-[11px] font-semibold text-slate-600 px-2 flex items-center">
+          <div className="flex items-center bg-slate-100 dark:bg-slate-800 p-1 rounded-lg border border-slate-200 dark:border-slate-700">
+            <span className="text-[11px] font-semibold text-slate-600 dark:text-slate-300 px-2 flex items-center">
               <Sparkles className="w-3.5 h-3.5 text-amber-500 mr-1" />
               Presets:
             </span>
@@ -447,7 +447,7 @@ export default function TranshipmentDashboard({
                 loadPreset1();
                 setActiveTab('workbench');
               }}
-              className="text-xs h-7 bg-white font-semibold"
+              className="text-xs h-7 bg-white dark:bg-slate-900 font-semibold"
             >
               Photo 1 (FDC-99995)
             </Button>
@@ -459,7 +459,7 @@ export default function TranshipmentDashboard({
                 loadPreset2();
                 setActiveTab('workbench');
               }}
-              className="text-xs h-7 bg-white font-semibold ml-1"
+              className="text-xs h-7 bg-white dark:bg-slate-900 font-semibold ml-1"
             >
               Photo 2 (A40983)
             </Button>

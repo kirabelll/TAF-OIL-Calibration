@@ -126,7 +126,7 @@ function TablesClientContent({
       </header>
 
       {/* Tabs Bar */}
-      <div className="flex flex-wrap gap-2 p-1.5 bg-slate-100 rounded-xl border border-slate-200">
+      <div className="flex flex-wrap gap-2 p-1.5 bg-slate-100 dark:bg-zinc-900 rounded-xl border border-slate-200 dark:border-zinc-800">
         {tabs.map((tab) => {
           const isActive = activeTable === tab.key;
           const Icon = tab.icon;
